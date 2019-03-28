@@ -1,12 +1,13 @@
 $(document).ready(function(){
   $("form").submit(function(event){
     var gender = $("#gender").val();
-    var age = $("#age").val();
+    var age = parseInt($("#age").val());
+    console.log(age);
 
     if (age >= 17 && gender === "Male"){
       $("#oldMen").show();
 
-    }else if (age <17 && gender === "Male"){
+    }else if (age < 17 && gender === "Male"){
       $("#youngMen").show();
 
     }else if (age >= 17 && gender === "Female"){
@@ -15,12 +16,12 @@ $(document).ready(function(){
     }else if (age < 17 && gender === "Female"){
       $("#youngWomen").show();
 
-    }else{
-      return;
+    } else {
+    alert("please put a valid number");
+    return;
     }
 
     console.log(age);
-    console.log(gender);
     event.preventDefault();
   });
 });

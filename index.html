@@ -21,13 +21,15 @@
 
 
       <h3>Please enter your age:</h3>
-
-      <div class="form-group has-error">
-        <label class="control-label" for="inputError1">age</label>
-        <input id="age" type="text" class="form-control" id="inputError1">
+      <div class="form-group has-error has-feedback">
+        <label class="control-label" for="inputError2">age</label>
+        <input id="age" type="number" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        <span id="inputError2Status" class="sr-only">(error)</span>
       </div>
 
-      <button type="submit" class="btn">Find your Celebrity!</button>
+
+      <button type="submit" class="btn=success">Find your Celebrity!</button>
     </form>
 
     <div id="youngMen">
